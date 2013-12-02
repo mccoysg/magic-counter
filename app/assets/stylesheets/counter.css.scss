@@ -1,0 +1,142 @@
+// Place all the styles related to the counter controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+$green: #5bb75b;
+$white: #ffffff;
+$blue-windows: #3498db;
+$gray-mac: #95a5a6;
+$gray-dark:#555555;
+$gray-darkest: #1a1a1a; // windows color
+
+$btnHeight: 82px;
+
+#myform {
+  text-align: center;
+  padding: 5px;
+  border: 1px dotted #ccc;
+  margin: 2%;
+}
+.qty {
+  width: 40px;
+  height: 25px;
+  text-align: center;
+}
+input.qtyplus { width:25px; height:25px;}
+input.qtyminus { width:25px; height:25px;}
+
+*{
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  background: url("http://ghostlab.vanamco.com/img/hero_img.jpg");
+  background-size: cover;
+}
+
+a{
+
+}
+
+a:hover{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container{
+  width: 700px;
+  margin: 10em auto;
+  position: relative;
+}
+
+section{
+  height: $btnHeight;
+  float: left;
+}
+
+.counter {
+  font-size: 0;
+  height: 60px;
+  overflow: hidden;
+  font-family: Helvetica Neue;
+  font-weight: bold;
+  text-align: center;
+}
+.counter .digit {
+  display: inline-block;
+  font-size: 56px;
+  text-align: center;
+}
+.counter .sequence {
+  width: 0.55em;
+  -webkit-transform: translate3d(0, -90%, 0);
+  -webkit-transition: -webkit-transform 400ms cubic-bezier(0.86, 0, 0.07, 1) /* easequint*/,
+  width 400ms ease-in-out,
+  opacity 400ms ease-in-out;
+}
+
+.counter .digit:last-child .sequence{
+  -webkit-transition-delay: 100ms;
+}
+
+.counter .sequence.is-hidden {
+  width: 0.02em;
+  opacity: 0;
+}
+
+body{
+  text-align: left;
+  margin-top: 100px;
+  margin-left: 150px;
+  background-image: gridme;
+}
+
+.small{
+  font-family: 'consolas', monospace;
+  font-size: 12px;
+  color: hsl(0, 0%, 30%);
+  text-indent: 2px;
+  padding-bottom: 10px;
+  position: relative;
+  margin-bottom: 30px;
+  border-top: 5px solid black;
+  width: 350px;
+  padding-top: 30px;
+}
+
+#a{
+  display: inline-block;
+
+}
+.wrapper{
+  color: hsl(0, 0%, 10%);
+}
+
+.wrapper::after{
+  content: '%';
+  font-size: 20px;
+  font-family: "Helvetica Neue";
+  font-weight: bold;
+  position: relative;
+  top: -5px;
+  display: inline-block;
+}
+
+.plus {
+  border-width:6px;
+}
+
+html #codepen-footer{
+  -webkit-transition: -webkit-transform .3s cubic-bezier(0.680, -0.550, 0.265, 1.550);
+  -webkit-transform: translate3d(0, 30px, 0) !important;
+}
+
+
+html:hover #codepen-footer{
+  -webkit-transform: translate3d(0, 0px, 0) !important;
+}
